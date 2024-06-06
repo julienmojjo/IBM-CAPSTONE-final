@@ -76,7 +76,7 @@ def get_pie_chart_2(selected_site,payload_range):
     low, high = payload_range
     if selected_site == 'ALL':
         filtered_df2 = spacex_df[(spacex_df['Payload Mass (kg)'] >= low) & (spacex_df['Payload Mass (kg)'] <= high)]
-        fig2 = px.scatter(filtered_df2, x='Payload Mass (kg)',y='class', color='Launch Site', title="Outcomes depending on payload")
+        fig2 = px.scatter(filtered_df2, x='Payload Mass (kg)',y='class', color='Booster Version', title="Outcomes depending on payload")
         fig2.update_layout(transition_duration=50)
         return fig2
     else:
